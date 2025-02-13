@@ -5,17 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flexbox Fun</title>
 <style>
-    @media (min-width: 600px) {
-        section{
-            flex-direction: row;
-        }
-    }
-    @media (min-width: 900px) {
-        section{
-            flex-direction: row;
-            justify-content: center;
-        }
-    }
+  @media (min-width: 600px) {
+      section {
+          flex-direction: row;
+      }
+  }
+  @media (min-width: 900px) {
+      section {
+          flex-direction: row;
+          justify-content: center;
+      }
+  }
+
   /* Additional styles for fun */
   .red { background: tomato; }
   .blue { background: dodgerblue; }
@@ -23,76 +24,82 @@
   .orange { background: orange; }
   .purple { background: rebeccapurple; }
 
+  /* Flexbox styling for items */
   .flex-item {
-    display:flex;
+    display: flex;
     width: 100px;
     height: 100px;
     color: white;
     font-size: 2em;
-    align-items:center;
+    align-items: center;
     justify-content: center;
   }
+
+  /* Styling for flex container */
   section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: lightgray;
-    padding:20px;
+    padding: 20px;
   }
-.Navbar {
-    display: flex;
-    justify-content: flex-start;
-    color: white;
-    font-size: 24px;
-    background-color: #333;
-    padding:20px;
-}
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    list-style: none;
-    align-items: center;
-}
 
+  /* Navbar styling */
+  .Navbar {
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      padding: 20px;
+  }
 
+  /* Push links to the right */
+  .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      align-items: center;
+      margin-left: auto; /* Moves nav links to the right */
+      padding: 0;
+  }
 
+  .nav-links li {
+      margin: 0 15px;
+  }
 
+  .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+  }
+
+  .nav-links a:hover {
+      text-decoration: underline;
+  }
 </style>
-
 </head>
 <body>
     <header>
         <nav>
             <div class="Navbar">
-                <h1>Logo</h1>
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQFxMKmdkXLkxg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708107235970?e=1744848000&v=beta&t=vbuiP226ah6mh1yZ9_4UO6hAHeblZrTcUUoGbkPPOYA" alt="Trenton Mychack" style="width: 100px; height: 100px; border-radius: 50%;">
+
                 <ul class="nav-links">
-                    <li><a style="color:white;" href="Home">Home</a></li>
-                    <li><a style="color: white;" href="About">About</a></li>
-                    <li><a style="color: white;" href="Services">Services</a></li>
-                    <li><a style="color: white;" href="Contact">Contact</a></li>
+                    <li><a href="Home">Home</a></li>
+                    <li><a href="About Me">About Me</a></li>
+                    <li><a href="Blog">Blog</a></li>
+                    <li><a href="Contact">Contact</a></li>
                 </ul>
             </div>
-        </nav>>
+        </nav>
     </header>
 
     <main>
         <section class="flex-container">
-            <div class="flex-item red">
-            1</div>
-            <div class="flex-item blue" >
-            1
-            </div>
-            <div class="flex-item green" >
-            1
-            </div>
-            <div class="flex-item orange" >
-            1
-            </div>
-            <div class="flex-item purple" >
-            1
-            </div>
-
+            <div class="flex-item red">1</div>
+            <div class="flex-item blue">1</div>
+            <div class="flex-item green">1</div>
+            <div class="flex-item orange">1</div>
+            <div class="flex-item purple">1</div>
         </section>
     </main>
 
@@ -101,10 +108,4 @@
     </footer>
 
 </body>
-
 </html>
-
-
-<!-- GOAL: use embeded styles to make the width & height to be 100px
-and the text inside should be white and font size 2em
--->
