@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Computer Science Junior</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Projects - Trenton Mychack</title>
+    <link rel="stylesheet" href="Projects.css">
 </head>
 <body>
     <header>
@@ -13,24 +13,34 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="Projects.html">Projects</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="flex-container">
             <article>
-                <h2>Welcome to My Blog</h2>
-                <p>Hello! I'm a junior in Computer Science with a passion for UX design and Software Development. In this blog, I share my journey, projects, and insights into the world of technology.</p>
+                <h2>Welcome to My Portfolio</h2>
+                <p>Here, you'll find my latest projects in UX design, software development, and more.</p>
             </article>
             <article>
-                <h2>Latest Projects</h2>
-                <p>Check out my latest projects where I combine my skills in UX design and software development to create user-friendly applications.</p>
+                <h2>Highlighted Projects</h2>
+                <ul>
+                    <li><strong>Project 1:</strong> Web App for Accessibility Analysis.</li>
+                    <li><strong>Project 2:</strong> AI-Powered UX Enhancement Tool.</li>
+                    <li><strong>Project 3:</strong> Personal Website (This Site!).</li>
+                </ul>
             </article>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2023 Computer Science Junior. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Trenton Mychack. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
