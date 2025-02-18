@@ -1,46 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
+document.addEventListener("DOMContentLoaded", () => {
+    const logo = document.querySelector(".glowing-logo");
 
-    // Smooth Scrolling for Navigation
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            if (this.getAttribute('href').startsWith('#')) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
+    // Toggle the glowing effect on click
+    logo.addEventListener("click", () => {
+        logo.classList.toggle("glowing-logo");
     });
 
-    // Dark Mode Toggle
-    const darkModeToggle = document.createElement('button');
-    darkModeToggle.textContent = 'Toggle Dark Mode';
-    darkModeToggle.style.position = 'fixed';
-    darkModeToggle.style.bottom = '20px';
-    darkModeToggle.style.right = '20px';
-    darkModeToggle.style.padding = '10px';
-    darkModeToggle.style.background = '#333';
-    darkModeToggle.style.color = '#fff';
-    darkModeToggle.style.border = 'none';
-    darkModeToggle.style.cursor = 'pointer';
-    document.body.appendChild(darkModeToggle);
-
-    darkModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
+    // Stop the glow when hovered
+    logo.addEventListener("mouseenter", () => {
+        logo.style.animation = "none";
     });
 
-    // Set Dark Mode CSS
-    const style = document.createElement('style');
-    style.textContent = `
-        .dark-mode {
-            background-color: #222;
-            color: #fff;
-        }
-        .dark-mode .content {
-            background-color: #333;
-            color: #ddd;
-        }
-    `;
-    document.head.appendChild(style);
+    logo.addEventListener("mouseleave", () => {
+        logo.style.animation = "glowing 1.5s infinite alternate";
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const logo = document.querySelector(".glowing-logo");
+    
+    // Toggle glow effect on click
+    logo.addEventListener("click", () => {
+        logo.classList.toggle("glowing-logo");
+    });
+});
 });

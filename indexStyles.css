@@ -37,21 +37,24 @@ section {
     padding: 20px;
 }
 
-/* Navbar styling */
 .Navbar {
     display: flex;
     align-items: center;
     background-color: #333;
     padding: 20px;
+    height: 120px; /* Ensure consistent height */
+    position: relative;
+    overflow: hidden; /* Prevent unwanted movement */
 }
 
 /* Push links to the right */
+/* Keep Navigation Links Aligned */
 .nav-links {
     display: flex;
     justify-content: flex-end;
     list-style: none;
     align-items: center;
-    margin-left: auto; /* Moves nav links to the right */
+    margin-left: auto;
     padding: 0;
 }
 
@@ -81,3 +84,65 @@ footer {
     background-color: #333;
     color: white;
 }
+/* Glowing animation */
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 5px red;
+    }
+    50% {
+        box-shadow: 0 0 20px red;
+    }
+    100% {
+        box-shadow: 0 0 5px red;
+    }
+}
+
+/* Pulsing circular glow animation */
+@keyframes circular-glow {
+    0% {
+        box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.8), 
+                    0 0 10px 5px rgba(255, 0, 0, 0.5);
+    }
+    25% {
+        box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.8), 
+                    0 0 20px 10px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px 8px rgba(255, 0, 0, 0.8), 
+                    0 0 30px 15px rgba(255, 0, 0, 0.5);
+    }
+    75% {
+        box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.8), 
+                    0 0 20px 10px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.8), 
+                    0 0 10px 5px rgba(255, 0, 0, 0.5);
+    }
+}
+
+/* Profile Image - Prevent Movement */
+.glowing-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid red;
+    box-shadow: 0 0 10px red;
+    animation: circular-glow 2s infinite ease-in-out;
+    object-fit: cover;
+    background-color: transparent;
+    transition: transform 0.3s ease-in-out;
+
+    /* Lock Position Inside Navbar */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Keeps it centered inside navbar */
+    pointer-events: none; /* Prevents interaction from shifting layout */
+}
+
+/* Hover Effect: Slight Scaling */
+.glowing-logo:hover {
+    transform: scale(1.1);
+}
+
