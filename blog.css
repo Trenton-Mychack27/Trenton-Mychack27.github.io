@@ -8,20 +8,28 @@ body {
 }
 
 /* Navbar Styling */
-.Navbar {
+.navbar {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Changed from horizontal to column layout */
+    gap: 20px; /* Adds spacing between nav items */
     background-color: #333;
     padding: 20px;
+    height: 120px; /* Keep this if you want fixed height */
+    position: relative;
+    overflow: hidden; /* Prevent unwanted movement */
+    box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+.navbar-content {
+    flex-direction: column; /* Remove default horizontal alignment */
+    gap: auto; /* Let content flow naturally without vertical constraints */
 }
 
 .nav-links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* Keep centered positioning for now */
     list-style: none;
-    align-items: center;
     margin-left: auto;
-    padding: 0;
 }
 
 .nav-links li {
@@ -33,11 +41,13 @@ body {
     text-decoration: none;
     font-size: 18px;
     text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
     text-decoration: none;
 }
+
 
 /* Project Section Styling */
 .flex-container {
