@@ -49,10 +49,11 @@ body {
 }
 
 /* Style the "Contact Me" text */
-.contact-me {
-    font-size: 18px;
+#contact {
+    font-size: 25px;
     font-weight: bold;
     color: #000; 
+    margin-left: 25px;
 }
 
 /* Ensure responsiveness */

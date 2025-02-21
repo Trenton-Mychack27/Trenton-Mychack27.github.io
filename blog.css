@@ -10,24 +10,24 @@ body {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    flex-direction: column; /* Changed from horizontal to column layout */
-    gap: 20px; /* Adds spacing between nav items */
+    flex-direction: column; 
+    gap: 20px; 
     background-color: #333;
     padding: 20px;
-    height: 120px; /* Keep this if you want fixed height */
+    height: 120px; 
     position: relative;
-    overflow: hidden; /* Prevent unwanted movement */
-    box-sizing: border-box; /* Ensure consistent sizing */
+    overflow: hidden; 
+    box-sizing: border-box; 
 }
 
 .navbar-content {
-    flex-direction: column; /* Remove default horizontal alignment */
-    gap: auto; /* Let content flow naturally without vertical constraints */
+    flex-direction: column; 
+    gap: auto; 
 }
 
 .nav-links {
     display: flex;
-    justify-content: center; /* Keep centered positioning for now */
+    justify-content: center; 
     list-style: none;
     margin-left: auto;
 }
@@ -37,12 +37,10 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 18px;
-    text-transform: uppercase;
-    transition: all 0.3s ease-in-out;
-}
+    text-transform: uppercase;}
 
 .nav-links a:hover {
     text-decoration: none;
@@ -60,48 +58,6 @@ body {
     border-radius: 5px;
 }
 
-/* Individual Project Cards */
-.project-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    margin: 15px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-card h2 {
-    font-size: 22px;
-    color: #333;
-}
-
-.project-card p {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Button for Project Links */
-.project-card a {
-    display: inline-block;
-    padding: 10px 15px;
-    margin-top: 10px;
-    background: #77aaff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.project-card a:hover {
-    background: #0056b3;
-}
-
 /* Footer Styling */
 footer {
     text-align: center;
@@ -111,11 +67,5 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+
 

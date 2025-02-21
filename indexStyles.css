@@ -42,9 +42,8 @@ section {
     align-items: center;
     background-color: #333;
     padding: 20px;
-    height: 120px; /* Ensure consistent height */
+    height: 120px; 
     position: relative;
-    overflow: hidden; /* Prevent unwanted movement */
 }
 
 /* Push links to the right */
